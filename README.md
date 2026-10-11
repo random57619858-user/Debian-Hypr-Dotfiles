@@ -35,8 +35,6 @@ cd Debian-Hypr-Dotfiles
 chmod +x install.sh
 ./install.sh
 ```
-After a reboot, log in and launch Hyprland from a TTY:
-Hyprland
 
 What it installs
 
