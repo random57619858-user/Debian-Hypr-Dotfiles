@@ -268,11 +268,10 @@ deploy "$DOTFILES_DIR/hypr"     "$HOME/.config/hypr"     "hypr"
 deploy "$DOTFILES_DIR/rofi"     "$HOME/.config/rofi"     "rofi"
 
 info "Setting up lockscreen wallpaper..."
-mkdir -p "$HOME/.config/hypr/wallpapers"
 
 if [ -f "$DOTFILES_DIR/wallpapers/astronaut.jpg" ]; then
     cp "$DOTFILES_DIR/wallpapers/astronaut.jpg" \
-       "$HOME/.config/hypr/wallpapers/lockscreen.jpg"
+       "$HOME/.config/hypr/lockscreen.jpg"
     ok "Lockscreen wallpaper set (copy of astronaut.jpg)"
 else
     warn "astronaut.jpg not found in wallpapers/, skipping lockscreen setup."
