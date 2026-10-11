@@ -267,6 +267,19 @@ deploy "$DOTFILES_DIR/wlogout"  "$HOME/.config/wlogout"  "wlogout"
 deploy "$DOTFILES_DIR/hypr"     "$HOME/.config/hypr"     "hypr"
 deploy "$DOTFILES_DIR/rofi"     "$HOME/.config/rofi"     "rofi"
 
+info "Setting up lockscreen wallpaper..."
+mkdir -p "$HOME/.config/hypr/wallpapers"
+
+if [ -f "$DOTFILES_DIR/wallpapers/astronaut.jpg" ]; then
+    cp "$DOTFILES_DIR/wallpapers/astronaut.jpg" \
+       "$HOME/.config/hypr/wallpapers/astronaut.jpg"
+    cp "$DOTFILES_DIR/wallpapers/astronaut.jpg" \
+       "$HOME/.config/hypr/wallpapers/lockscreen.jpg"
+    ok "Lockscreen wallpaper set (astronaut.jpg → lockscreen.jpg)"
+else
+    warn "astronaut.jpg not found in wallpapers/, skipping lockscreen setup."
+fi
+
 info "Setting up wlogout icons from Fluent-dark..."
 ICON_SRC="$HOME/.local/share/icons/Fluent-dark/scalable/apps"
 
