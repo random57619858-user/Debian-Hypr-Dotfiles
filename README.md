@@ -17,7 +17,6 @@ There are three different install scripts at the root of this repository. Pick t
 - A Debian, Ubuntu, or Solus installation
 - `git` and `sudo` installed
 - A working internet connection
-- A bit of patience, the `apt full-upgrade` to Sid takes a while
 
 ## Installation
 
