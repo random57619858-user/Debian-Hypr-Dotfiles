@@ -23,9 +23,9 @@ There are three different install scripts at the root of this repository, pick t
 
 First, clone the repository:
 
-git clone https://github.com/random57619858-user/Totsso-Hypr-Dotfiles
+**git clone https://github.com/random57619858-user/Totsso-Hypr-Dotfiles
 
-cd Totsso-Hypr-Dotfiles
+cd Totsso-Hypr-Dotfiles**
 
 Then, run the script for your specific distribution:
 
