@@ -8,7 +8,7 @@ A basic Hyprland dotfile setup for **Debian**, **Ubuntu**, and **Solus**. It set
 
 There are three different install scripts at the root of this repository. Pick the one for your system:
 
-- **debian-install.sh**: Switches `/etc/apt/sources.list` to **Debian unstable (Sid)**. Hyprland and some of its dependencies are only available there, so there's no way around it if you want a modern setup on Debian. Sid is a rolling release. Breakage happens. That's the trade-off. If you're not comfortable with that, this script isn't for you D:
+- **debian-install.sh**: Switches `/etc/apt/sources.list` to **Debian unstable (Sid)**. Hyprland and some of its dependencies are only available there, so there's no way around it if you want a modern setup on Debian. Sid is a rolling release. Breakage happens. That's the trade-off. If you're not comfortable with that, this script isn't for you D: 
 - **ubuntu-install.sh**: Installs Hyprland from the `universe` repository. It also gives you the option to completely remove Snap at the beginning.
 - **solus-install.sh**: Uses `eopkg` and works out of the box without needing to change repositories.
 
@@ -23,23 +23,25 @@ There are three different install scripts at the root of this repository. Pick t
 
 First, clone the repository:
 
-git clone https://github.com/random57619858-user/Totsso-Hypr-Dotfiles
-
-cd Totsso-Hypr-Dotfiles
+    git clone https://github.com/random57619858-user/Totsso-Hypr-Dotfiles
+    cd Totsso-Hypr-Dotfiles
 
 Then, run the script for your specific distribution:
 
 **For Ubuntu:**
-chmod +x ubuntu-install.sh
-./ubuntu-install.sh
+
+    chmod +x ubuntu-install.sh
+    ./ubuntu-install.sh
 
 **For Debian:**
-chmod +x debian-install.sh
-./debian-install.sh
+
+    chmod +x debian-install.sh
+    ./debian-install.sh
 
 **For Solus:**
-chmod +x solus-install.sh
-./solus-install.sh
+
+    chmod +x solus-install.sh
+    ./solus-install.sh
 
 ## What it installs
 
