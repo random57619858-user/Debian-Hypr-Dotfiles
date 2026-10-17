@@ -2,22 +2,22 @@
 
 A basic Hyprland dotfile setup for **Debian**, **Ubuntu**, and **Solus**. It sets up a minimal, gruvbox-themed desktop: compositor, bar, launcher, terminal, wallpaper and a few tools so you can log in after a reboot and just use it.
 
-
 <img width="1366" height="768" alt="imagen" src="https://github.com/user-attachments/assets/68700ec4-a07a-4609-94ae-e0b3281434b3" />
 
 ## ⚠️ About the scripts
 
-There are three different install scripts at the root of this repository, pick the one for your system:
+There are three different install scripts at the root of this repository. Pick the one for your system:
 
-- **debian-install.sh**: Switches /etc/apt/sources.list to Debian unstable (Sid). Hyprland and some of its dependencies are only available there, so there's no way around it if you want a modern setup on Debian. Sid is a rolling release. Breakage happens. That's the trade-off. If you're not comfortable with that, this script isn't for you D:
-- **ubuntu-install.sh**: Installs Hyprland from the universe repository. It also gives you the option to completely remove Snap at the beginning.
-- **solus-install.sh**: Uses eopkg and works out of the box without needing to change repositories.
+- **debian-install.sh**: Switches `/etc/apt/sources.list` to **Debian unstable (Sid)**. Hyprland and some of its dependencies are only available there, so there's no way around it if you want a modern setup on Debian. Sid is a rolling release. Breakage happens. That's the trade-off. If you're not comfortable with that, this script isn't for you D:
+- **ubuntu-install.sh**: Installs Hyprland from the `universe` repository. It also gives you the option to completely remove Snap at the beginning.
+- **solus-install.sh**: Uses `eopkg` and works out of the box without needing to change repositories.
 
 ## Requirements
 
 - A Debian, Ubuntu, or Solus installation
-- git and sudo installed
+- `git` and `sudo` installed
 - A working internet connection
+- A bit of patience, the `apt full-upgrade` to Sid takes a while
 
 ## Installation
 
@@ -25,27 +25,25 @@ First, clone the repository:
 
 git clone https://github.com/random57619858-user/Totsso-Hypr-Dotfiles
 
-cd Totsso-Hypr-Dotfiles 
-
-
+cd Totsso-Hypr-Dotfiles
 
 Then, run the script for your specific distribution:
 
-For Ubuntu:
+**For Ubuntu:**
 chmod +x ubuntu-install.sh
 ./ubuntu-install.sh
 
-For Debian:
+**For Debian:**
 chmod +x debian-install.sh
 ./debian-install.sh
 
-For Solus:
+**For Solus:**
 chmod +x solus-install.sh
 ./solus-install.sh
 
-What it installs
+## What it installs
 
-Core desktop:
+**Core desktop:**
 - Hyprland (compositor)
 - Waybar (status bar)
 - Rofi (app launcher and wallpaper picker)
@@ -53,7 +51,7 @@ Core desktop:
 - Cava (audio visualizer)
 - Hyprpaper (wallpaper daemon)
 
-Extra tools:
+**Extra tools:**
 - GDM (login manager)
 - Wlogout (power menu)
 - Hypridle + Hyprlock (idle and lock screen)
@@ -65,27 +63,28 @@ Extra tools:
 - Fluent icon theme
 - JetBrainsMono Nerd Font
 
-Optional (asked during install):
+**Optional (asked during install):**
 - Printer support (CUPS)
 - Flatpak + Flathub
 - Steam, OnlyOffice, Discord
 
-Keybindings
-- SUPER + Q: Open kitty
-- SUPER + D: App launcher (rofi)
-- SUPER + W: Change wallpaper
-- SUPER + C: Close window
-- SUPER + V: Toggle floating window
-- SUPER + A: Clipboard history
-- SUPER + L: Lock screen
-- SUPER + 1-0: Switch workspace
-- SUPER + SHIFT + 1-0: Move window to workspace
-- SUPER + SHIFT + E: Power menu (wlogout)
-- SUPER + Print: Screenshot
+## Keybindings
 
-Backups
+- `SUPER + Q`: Open kitty
+- `SUPER + D`: App launcher (rofi)
+- `SUPER + W`: Change wallpaper
+- `SUPER + C`: Close window
+- `SUPER + V`: Toggle floating window
+- `SUPER + A`: Clipboard history
+- `SUPER + L`: Lock screen
+- `SUPER + 1-0`: Switch workspace
+- `SUPER + SHIFT + 1-0`: Move window to workspace
+- `SUPER + SHIFT + E`: Power menu (wlogout)
+- `SUPER + Print`: Screenshot
 
-The script asks before overwriting anything in ~/.config/. If you say yes, a copy gets saved to backup/ inside this repo. Your sources.list can also be backed up before it's replaced.
+## Backups
+
+The script asks before overwriting anything in `~/.config/`. If you say yes, a copy gets saved to `backup/` inside this repo. Your `sources.list` can also be backed up before it's replaced.
 
 It's not the best dotfile, but I hope you like it :)
 
