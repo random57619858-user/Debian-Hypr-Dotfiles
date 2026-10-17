@@ -55,11 +55,15 @@ banner
 
 if [ -f /etc/os-release ]; then
     . /etc/os-release
-    case "${ID:-}:${ID_LIKE:-}" in
-        ubuntu:*|*:*ubuntu*|*:*debian*) ok "Ubuntu/Debian detected: ${PRETTY_NAME:-unknown}" ;;
-        *) warn "This script is intended for Ubuntu (detected: ${ID:-unknown})."
-           confirm "Continue anyway?" || { fail "Aborted by user."; exit 0; } ;;
-    esac
+    if [ "${ID:-}" != "ubuntu" ] && [[ "${ID_LIKE:-}" != *"ubuntu"* ]]; then
+        fail "This script is intended for Ubuntu only. Detected: ${PRETTY_NAME:-unknown}"
+        fail "If you are on Debian, use debian-install.sh instead."
+        exit 1
+    fi
+    ok "Ubuntu detected: ${PRETTY_NAME:-unknown}"
+else
+    fail "Could not detect OS (/etc/os-release not found)."
+    exit 1
 fi
 
 if ! command -v sudo >/dev/null 2>&1; then
@@ -350,7 +354,6 @@ else
 fi
 
 info "Fixing script permissions..."
-find "$HOME/.config" -type f -name "*.sh" -exec chmod +x {} + 2>/dev/null || true
 find "$DOTFILES_DIR" -type f -name "*.sh" -exec chmod +x {} + 2>/dev/null || true
 
 echo -e "\n${GREEN}${BOLD}┌──────────────────────────────────────────────────┐"
